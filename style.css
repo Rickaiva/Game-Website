@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: white;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+
+    position: fixed;
+    padding: 20px 20px 0px 30px;
+    
+}
+
+header{  
+    
+    width: 60%;   
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+.menu{
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    justify-content: center;
+}
+
+.menu ul {
+    
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+}
+
+.menu ul li a{
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #000000, 1px 1px 0 #ffffff;
+    font-weight: bold;
+    font-size: 23px;
+    color: rgb(55, 38, 8);
+    padding: 30px 30px;
+    display: block;
+}
+
+.menu ul li a:hover{
+    text-decoration: underline;
+}
+
+.main{
+
+    min-height: 100vh;
+    background-image: url("MAIN_MENU.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+}
+
+.main-content{
+    max-width: 420px;
+}
+
+.main-content img { 
+    margin-bottom: 300px;
+    margin-left: 350px;
+}
+
+.main-button{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 250px;
+    margin-left: 200px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-trailer{
+    background-color: rgb(128, 97, 13);
+    border-radius: 47%;
+    color: white;
+    padding: 10px 20px;
+}
+
+.btn-trailer:hover{
+    background-color: rgb(79, 55, 15);
+    color: rgb(113, 113, 113);
+}
+
+.video{
+    background-color: black;
+}
+
+.video iframe{
+    margin: 40px 0px 60px 430px;
+}
+
+.about{
+    background-image: url("speech-bubble-pixel.jpg");
+    padding-bottom: 120px;
+    background-size: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #000000;
+    color: #000000;
+}
+
+.about h2{
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 70px;
+    padding-bottom: 13px;
+    font-size: 45px;
+
+}
+
+.about p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 100px;
+    font-size: 17px;
+}
+
+.characterpage{
+    
+    background-image: url("ruin-bg(1).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 500px;
+    
+}
+
+.characterpage h2{
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #000000;
+    font-weight: bold;
+    font-size: 23px;
+    color: rgb(55, 38, 8);
+    text-align: center;
+    padding-top: 40px;
+}
