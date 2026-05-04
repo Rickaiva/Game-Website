@@ -17,54 +17,102 @@ a {
 }
 
 .logo {
-
-    position: fixed;
-    padding: 20px 20px 0px 30px;
-    
+    position: absolute;
 }
 
 header{  
-    
-    width: 60%;   
-    display: flex;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
     z-index: 1000;
+    overflow: hidden;
 }
 
 
 .menu{
-    font-family: 'Courier New', Courier, monospace;
-    margin: auto;
-    justify-content: center;
+    background-color:rgb(11,24,53);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 50px;
+    z-index: 1000;
 }
 
-.menu ul {
+/* .menu ul {
     
-    overflow: hidden;
+    
     position: fixed;
     display: flex;
     align-items: center;
     list-style: none;
     
-}
+} */
 
-.menu ul li a{
+.menu a{
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #000000, 1px 1px 0 #ffffff;
     font-weight: bold;
     font-size: 23px;
     color: rgb(55, 38, 8);
-    padding: 30px 30px;
-    display: block;
+    
 }
 
-.menu ul li a:hover{
+.menu a:hover{
     text-decoration: underline;
 }
+
+/* header{
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+header img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav{
+    background-color:rgb(11,24,53);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 1000;
+}
+
+nav #home{
+    color: white;
+    font-size: 20px;
+    font-family: logoFont;
+    
+}
+
+nav .button{
+  font-family: pageFont;
+  font-size: 23px;
+  padding-top: 10px;
+}
+
+nav a{
+    
+    color:rgb(240,246,182);
+    text-decoration: none;
+    margin: 15px 20px;
+    position: relative;
+    
+
+} */
 
 .main{
 
     min-height: 100vh;
-    background-image: url("MAIN_MENU.png");
+    background-image: url(image/MAIN_MENU.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -92,7 +140,7 @@ header{
 
 .btn-trailer{
     background-color: rgb(128, 97, 13);
-    border-radius: 47%;
+    border-radius: 87px;
     color: white;
     padding: 10px 20px;
 }
@@ -103,21 +151,21 @@ header{
 }
 
 .video{
-    background-color: black;
+    background-color: rgb(12,63,37);
 }
 
 .video iframe{
-    margin: 40px 0px 60px 430px;
+    margin: 13% 0px 60px 430px;
 }
 
 .about{
-    background-image: url("speech-bubble-pixel.jpg");
+    background-image: url("image/speech-bubble-pixel.jpg");
     padding-bottom: 120px;
     background-size: 900px;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    background-color: #000000;
+    background-color: rgb(12,63,37);
     color: #000000;
 }
 
