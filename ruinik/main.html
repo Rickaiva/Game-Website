@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ruinik</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#home"><img src="image/logo-sample(1).png" alt="Ruinik Logo" height="50px" width="130px"></a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navbar -->
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#gamefeat">Game Features</a></li>
+                <li><a href="#gamedev">Game Dev</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Section -->
+    <div class="main" id="home">
+        <div class="main-content">
+            <img src="image/logo-sample(1).png" alt="Ruinik" height="280px">
+            <div class="main-button">
+                <a href="#trailer" class="btn-trailer">Watch Trailer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trailer Section -->
+    <div class="video" id="trailer">
+        <iframe height="400" width="700" src="https://youtube.com/embed/aAg3bwzSuLk" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen title="Ruinik Trailer"></iframe>
+    </div>
+
+    <!-- About Section -->
+    <div class="about" id="about">
+        <div class="about-bubble">
+            <img src="image/speech-bubble-pixel.jpg" alt="" class="bubble-img">
+            <div class="about-bubble-text">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Obcaecati sit numquam a placeat blanditiis ipsum doloremque
+                reiciendis assumenda nobis, sunt aliquam incidunt, dignissimos eligendi facere,
+                consequuntur quod excepturi laboriosam vel.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character section -->
+    <div class="characterpage" id="characters">
+        <h2>Characters</h2>
+    </div>
+
+    <!-- Game Features section -->
+    <div class="gamefeat" id="gamefeat">
+    </div>
+
+    <!-- Game Dev section -->
+    <div class="gamedev" id="gamedev">
+    </div>
+
+    <!-- Page transition -->
+    <div class="nav-transition-overlay" id="navOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
