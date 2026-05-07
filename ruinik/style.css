@@ -253,7 +253,10 @@ header {
 }
 
 .video {
-    background-color: rgb(17,17,19);
+    background-image: url(image/ground.png);
+    background-repeat: no-repeat;
+    background-size: 100% 140%;
+    
     display: flex;
     justify-content: center;
     padding: 10% 20px 60px;
