@@ -246,9 +246,9 @@ header {
 
 .layer-grass {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 0;             
-    width: 100%;
+    width: 110%;
     height: 70%;        
     z-index: 5;           
     pointer-events: none;
@@ -312,28 +312,30 @@ header {
 }
 
 .video {
-    background-image: url(image/ground.png);
+    background-image: url(image/video-background.png);
     background-repeat: no-repeat;
-    background-size: 100% 140%;
-    
+    background-size: 100% 846px;
     display: flex;
     justify-content: center;
-    padding: 10% 20px 60px;
+    padding: 19% 20px 10%;
 }
 
-.video iframe {
+.video video {
     max-width: 100%;
     width: 700px;
     height: 400px;
     border: none;
+    border-radius: 10px;
 }
 
 .about {
-    background-color: rgb(17,17,19);
+    background-image: url(image/aboutgame-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20% 14rem 16%;
+    padding: 16% 14rem 10%;
 }
 
 .about-bubble {
@@ -341,14 +343,12 @@ header {
     display: inline-block;
     max-width: 860px;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 0;
 }
 
-/* .about-bubble img.bubble-img {
-    display: block;
-    width: 100%;
-    height: auto;
-} */
+.about-bubble img{
+    margin-left: 16%;
+}
 
 .about-bubble-text {
     position: absolute;
@@ -368,13 +368,13 @@ header {
 
 .about-bubble-text h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: clamp(20px, 4vw, 40px);
-    margin-bottom: 10px;
+    font-size: clamp(20px, 4vw, 50px);
+    margin-bottom: 20px;
 }
 
 .about-bubble-text p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: clamp(12px, 1.8vw, 17px);
+    font-size: clamp(12px, 1.8vw, 20px);
     line-height: 1.7;
 }
 
@@ -389,11 +389,9 @@ header {
 
 .characterpage h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff,
-                 -1px 1px 0 #fff, 1px 1px 0 #000;
     font-weight: bold;
     font-size: 23px;
-    color: rgb(55, 38, 8);
+    color: white;
     text-align: center;
     padding-top: 40px;
 }
