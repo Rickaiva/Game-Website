@@ -458,6 +458,59 @@ header {
    }
 }
 
+.gamefeat {
+    background-color: #201e1e;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 7%;   
+}
+
+.gamefeat .main-tag{
+    align-items: start;
+   color: white;
+    position: absolute;
+    margin-top: 3%;
+}
+
+.feature-container{
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 12% 10% 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    align-items: stretch;
+    text-align: center;
+
+}
+
+.feature-container h2{
+    margin-bottom: 3%;
+
+}
+
+.feature-container p{
+    text-align: center;
+}
+
+.soon-feature {
+    color: white;
+    align-items: center;
+   text-align: center;
+}
+
+.soon-feature h2{
+    margin-bottom: 5%;
+}
+
+
+
+
 .gamefeat,
 .gamedev {
     min-height: 300px;
