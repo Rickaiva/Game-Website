@@ -277,11 +277,7 @@ header {
 
 
 .main-content img {
-    /* max-width: 100%;
-    height: auto;
-    max-height: 180px;
-    object-fit: contain; */
-    max-width: 50%;               /* or a px value like 400px */
+    max-width: 50%;
   height: auto;
   display: block
 }
@@ -362,8 +358,6 @@ header {
     align-items: center;
     text-align: center;
     color: #ffffff;
-    
-    /* overflow: hidden; */
 }
 
 .about-bubble-text h2 {
@@ -402,15 +396,11 @@ header {
 
 
 .character-page {
-   
-    
     position: relative;
-     
 }
 
 
 .Character {
-   
     padding-top: 13%;
     left: 24%;
    width: calc(16px * var(--pixel-size));
@@ -418,7 +408,6 @@ header {
    overflow: hidden;
    position:relative;
    margin: 4em auto;
-   
 }
 
 
@@ -435,7 +424,6 @@ header {
   left: 12px;                
   top: -60px;
   white-space: nowrap;    
-  
 }
 
 .Character_spritesheet:hover + .hide {
@@ -459,61 +447,205 @@ header {
 }
 
 .gamefeat {
-    background-color: #201e1e;
+    background-image: url(image/aboutgame-background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  padding-bottom: 7%;   
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 4% 8%;
+    gap: 40px;
 }
 
-.gamefeat .main-tag{
-    align-items: start;
-   color: white;
-    position: absolute;
-    margin-top: 3%;
+.gamefeat .main-tag {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(26px, 3.5vw, 46px);
+    color: #f5e8a0;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 0 0 16px rgba(200, 160, 20, 0.7);
+    margin: 0;
+    position: static;
 }
 
-.feature-container{
-    
-    color: white;
+.gamefeat-feature-container {
+    position: relative;
+    display: inline-block;
+    max-width: 860px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.gamefeat-feature-container img{
+    margin-left: 16%;
+}
+
+.feature-container {
     display: flex;
     justify-content: center;
-    padding: 12% 10% 3%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 2%;
+    gap: 32px;
     width: 100%;
     align-items: stretch;
-    text-align: center;
-
 }
 
-.feature-container h2{
-    margin-bottom: 3%;
-
+.feature-frame {
+    position: relative;
+    width: 400px;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-shrink: 0;
 }
 
-.feature-container p{
+.feature-frame-bg {
+    position: absolute;
+    inset: 0;
+    margin-top: -50px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.feature-frame-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+}
+
+.feature-frame-content h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(20px, 2.2vw, 28px);
+    letter-spacing: 1.5px;
+    color: #f5e8a0;
+    text-shadow: 0 0 12px rgba(200, 160, 20, 0.8);
+    margin: 0;
+    padding: 7% 10% 4%;
+    width: 100%;
+    border-bottom: 1px solid rgba(200, 160, 20, 0.25);
+}
+
+.feature-frame-content p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(14px, 1.4vw, 18px);
+    line-height: 1.8;
+    color: #e8dfc0;
+    padding: 6% 10% 8%;
 }
 
 .soon-feature {
     color: white;
     align-items: center;
    text-align: center;
+   background-color: #2424249d;
 }
 
 .soon-feature h2{
     margin-bottom: 5%;
 }
 
-
-
-
-.gamefeat,
 .gamedev {
+    background-color: #0d0a05;
+    padding: 60px 40px 80px;
     min-height: 300px;
+}
+
+.gamedev-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(22px, 4vw, 40px);
+    color: rgb(210, 175, 85);
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(180, 130, 20, 0.5);
+}
+
+.gamedev-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dev-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.dev-card:hover {
+    transform: translateY(-6px);
+}
+
+.dev-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(210, 175, 85);
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(180, 130, 20, 0.4);
+    padding: 4px 10px;
+    min-width: 120px;
+    cursor: text;
+    outline: none;
+    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px 4px 0 0;
+}
+
+.dev-name:focus {
+    border-bottom-color: rgb(210, 175, 85);
+    color: #fff;
+    box-shadow: 0 2px 0 rgba(210, 175, 85, 0.5);
+}
+
+.dev-name:empty::before {
+    content: 'Developer Name';
+    color: rgba(180, 130, 20, 0.4);
+    pointer-events: none;
+}
+
+.dev-card a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(180, 130, 20, 0.25);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dev-card a:hover {
+    border-color: rgb(210, 175, 85);
+    box-shadow: 0 0 20px rgba(180, 130, 20, 0.45);
+}
+
+.dev-card a img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    image-rendering: auto;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.dev-card a:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.1);
 }
 
 @media (max-width: 900px) {
@@ -525,6 +657,11 @@ header {
     .video iframe {
         width: 100%;
         height: 300px;
+    }
+
+    .dev-card a img {
+        width: 130px;
+        height: 130px;
     }
 }
 
@@ -542,8 +679,8 @@ header {
         width: 78vw;
         max-width: 300px;
         background: rgba(18, 12, 3, 0.97);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         z-index: 1100;
         transform: translateX(110%);
         visibility: hidden;
@@ -581,8 +718,6 @@ header {
         opacity: 1;
         transform: translateX(0);
     }
-
-
 
     .menu ul li a {
         font-size: 20px;
@@ -660,5 +795,18 @@ header {
 
     [id] {
         scroll-margin-top: 70px;
+    }
+
+    .gamedev {
+        padding: 40px 16px 60px;
+    }
+
+    .gamedev-grid {
+        gap: 24px;
+    }
+
+    .dev-card a img {
+        width: 120px;
+        height: 120px;
     }
 }
