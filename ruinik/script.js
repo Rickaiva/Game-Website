@@ -36,7 +36,6 @@ window.addEventListener('scroll', function () {
         bg.style.transformOrigin = 'bottom center';
     }
 
-    // Parallax: logo + trailer button fade out and slide up
     const mainContent = document.querySelector('.main-content');
     if (mainContent) {
         const fadeProgress = Math.min(scrollY / (mainSection.offsetHeight * 0.5), 1);
