@@ -48,7 +48,7 @@
         <div class="main-content">
             <img src="image/logo-sample(1).png" alt="Ruinik" height="280px">
             <div class="main-button">
-                <a href="#trailer" class="btn-trailer">Watch Trailer</a>
+                <button class="btn-trailer" onclick="document.getElementById('trailer').scrollIntoView({behavior:'smooth'})">Watch Trailer</button>
             </div>
         </div>
 
@@ -56,6 +56,7 @@
 
     <!-- Trailer Section -->
     <div class="video" id="trailer">
+        <h2 class="trailer-title">Trailer</h2>
         <video src="video/Download(14).mp4" controls></video>
     </div>
 

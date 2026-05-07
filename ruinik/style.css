@@ -216,7 +216,7 @@ header {
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
-    will-change: transform;
+    transform: none !important;
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
@@ -235,7 +235,7 @@ header {
 
 .layer-char {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     right: 25%;
     height: 35%;
     width: 10%;
@@ -248,7 +248,7 @@ header {
     position: absolute;
     bottom: -3px;
     left: 0;             
-    width: 110%;
+    width: 100%;
     height: 70%;        
     z-index: 5;           
     pointer-events: none;
@@ -274,8 +274,6 @@ header {
     margin-top: 2%;
 }
 
-
-
 .main-content img {
     max-width: 50%;
   height: auto;
@@ -296,6 +294,10 @@ header {
     border-radius: 87px;
     color: white;
     padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: inherit;
     transition: background-color 0.3s ease, color 0.3s ease,
                 transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -310,10 +312,24 @@ header {
 .video {
     background-image: url(image/video-background.png);
     background-repeat: no-repeat;
-    background-size: 100% 846px;
+    background-size: 100% 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 19% 20px 10%;
+    gap: 24px;
+    margin: 0;
+}
+
+.trailer-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(26px, 3.5vw, 46px);
+    color: #f5e8a0;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 0 0 16px rgba(200, 160, 20, 0.7);
+    margin: 0;
 }
 
 .video video {
