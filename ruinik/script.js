@@ -4,9 +4,47 @@ window.addEventListener('scroll', function () {
     const mainSection = document.querySelector('.main');
     if (!mainSection) return;
     const maxScroll = mainSection.offsetHeight;
-    const scale = 1 + (scrollY / maxScroll) * 0.3;
-    mainSection.style.backgroundSize = scale * 100 + '%';
-    mainSection.style.backgroundPosition = 'center';
+    const progress = Math.min(scrollY / maxScroll, 1);
+
+    
+    const clouds = document.querySelector('.layer-clouds');
+    if (clouds) {
+        const scale = 1 - progress * 0.35;
+        clouds.style.transform = `scale(${scale})`;
+        clouds.style.transformOrigin = 'top center';
+        clouds.style.opacity = 1 - progress * 0.8;
+    }
+
+    const char = document.querySelector('.layer-char');
+    if (char) {
+        const slideX = progress * 120; 
+        char.style.transform = `translateX(${slideX}%)`;
+        char.style.opacity = 1 - progress * 1.5; 
+    }
+
+    const grass = document.querySelector('.layer-grass');
+    if (grass) {
+        const scale = 1 - progress * 0.6;
+        grass.style.transform = `scaleY(${scale})`;
+        grass.style.transformOrigin = 'bottom center';
+    }
+
+    const bg = document.querySelector('.layer-bg');
+    if (bg) {
+        const scale = 1 - progress * 0.6;
+        bg.style.transform = `scaleY(${scale})`;
+        bg.style.transformOrigin = 'bottom center';
+    }
+
+    // Parallax: logo + trailer button fade out and slide up
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        const fadeProgress = Math.min(scrollY / (mainSection.offsetHeight * 0.5), 1);
+        const translateY = fadeProgress * -60;
+        const opacity = 1 - fadeProgress * 1.2;
+        mainContent.style.transform = `translateY(${translateY}px)`;
+        mainContent.style.opacity = Math.max(opacity, 0);
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
