@@ -373,77 +373,143 @@ header {
 }
 
 .characterpage {
-     background-image: url(image/platform-bground.jpg);
-     background-repeat: no-repeat;
-     background-position: center top;
-    background-size: 100% 100%;
-    padding-bottom: 500px;
-    height: 500px;
+    background-color: #0a0a12;
+    padding: 50px 20px 60px;
+    overflow: hidden;
 }
 
-.characterpage h2 {
+.characterpage h2,
+.chars-title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    font-size: 23px;
-    color: white;
+    font-size: clamp(22px, 3.5vw, 40px);
+    color: #f5e8a0;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 16px rgba(200, 160, 20, 0.7);
 }
 
-:root {
-   --pixel-size: 6;
-}
-
-
-.character-page {
+.character-scene {
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    overflow: visible;
+    aspect-ratio: 16 / 7;
 }
 
-
-.Character {
-    padding-top: 13%;
-    left: 24%;
-   width: calc(16px * var(--pixel-size));
-   height: calc(50px * var(--pixel-size));
-   overflow: hidden;
-   position:relative;
-   margin: 4em auto;
+.char-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    z-index: 0;
+    border-radius: 0;
 }
 
-
-
-.Character_spritesheet {
-   animation: moveSpritesheet 1s steps(4) infinite;
-   width: calc(128px * var(--pixel-size));
-   position: absolute;
+.char-card {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
-.hide {
-    display: none;
-    position: relative;        
-  left: 12px;                
-  top: -60px;
-  white-space: nowrap;    
+.char-left {
+    left: 25%;
+    bottom: 37%;
+}
+.char-left .char-info {
+    transform: translateX(-50%);
 }
 
-.Character_spritesheet:hover + .hide {
+.char-right {
+    right: 15%;
+    bottom: 50%;
+}
+
+.char-sprite {
+    height: 120px;
+    width: auto;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.9));
+    transition: transform 0.2s ease, filter 0.2s ease;
     display: block;
-    color: rgb(255, 255, 255);
+}
+
+.char-card:hover .char-sprite {
+    transform: translateY(-5px) scale(1.12);
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.9))
+            drop-shadow(0 0 8px rgba(255,220,80,0.5));
+}
+
+.char-info {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: rgba(10, 6, 2, 0.82);
+    border: 1px solid rgba(200,160,20,0.45);
+    border-radius: 8px;
+    padding: 7px 12px;
+    pointer-events: none;
+    text-align: center;
+    min-width: 160px;
+    max-width: 220px;
+    white-space: normal;
     font-size: 20px;
 }
 
-.pixelart {
-   image-rendering: pixelated;
+.char-right .char-info {
+    transform: translateX(-50%);
 }
 
+.char-card:hover .char-info {
+    display: block;
+}
 
-@keyframes moveSpritesheet {
-   from {
-      transform: translate3d(0px,0,0)
-   }
-   to {
-      transform: translate3d(-100%,0,0)
-   }
+.char-name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f5e8a0;
+    margin-bottom: 3px;
+    text-shadow: 0 0 8px rgba(200,160,20,0.8);
+}
+
+.char-role {
+    font-size: 0.72em;
+    color: #bbb;
+    font-weight: normal;
+}
+
+.char-desc {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #e0d8c0;
+}
+
+@keyframes vsPulse {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50%       { opacity: 0.7; transform: translateX(-50%) scale(1.12); }
+}
+
+@media (max-width: 640px) {
+    .character-scene {
+        aspect-ratio: 16 / 9;
+    }
+    .char-left  { left: 5%;  bottom: 40%; }
+    .char-right { right: 10%; bottom: 70%; }
+    .characterpage { padding: 30px 12px 40px; }
 }
 
 .gamefeat {
@@ -615,12 +681,6 @@ header {
     box-shadow: 0 2px 0 rgba(210, 175, 85, 0.5);
 }
 
-.dev-name:empty::before {
-    content: 'Developer Name';
-    color: rgba(180, 130, 20, 0.4);
-    pointer-events: none;
-}
-
 .dev-card a {
     display: block;
     border-radius: 12px;
@@ -790,7 +850,7 @@ header {
     }
 
     .characterpage {
-        padding-bottom: 200px;
+        padding: 30px 12px 40px;
     }
 
     [id] {
