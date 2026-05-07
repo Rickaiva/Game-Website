@@ -205,17 +205,26 @@ header {
 }
 
 .main-content {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem; */
+    display: flex;
+  flex-direction: column;       /* stack vertically */
+  align-items: center;          /* center children horizontally */
+  gap: 16px;                    /* space between image and button */
+  text-align: center;
+  transform: translateY(-10px);
 }
 
 .main-content img {
-    max-width: 100%;
+    /* max-width: 100%;
     height: auto;
     max-height: 180px;
-    object-fit: contain;
+    object-fit: contain; */
+    max-width: 50%;               /* or a px value like 400px */
+  height: auto;
+  display: block
 }
 
 .main-button {
@@ -229,7 +238,7 @@ header {
 
 .btn-trailer {
     background-color: rgb(128, 97, 13);
-    border-radius: 47%;
+    border-radius: 87px;
     color: white;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease,
@@ -244,10 +253,10 @@ header {
 }
 
 .video {
-    background-color: black;
+    background-color: rgb(17,17,19);
     display: flex;
     justify-content: center;
-    padding: 40px 20px 60px;
+    padding: 10% 20px 60px;
 }
 
 .video iframe {
@@ -258,11 +267,11 @@ header {
 }
 
 .about {
-    background-color: #000000;
+    background-color: rgb(17,17,19);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 1rem 80px;
+    padding: 20% 14rem 16%;
 }
 
 .about-bubble {
@@ -270,13 +279,14 @@ header {
     display: inline-block;
     max-width: 860px;
     width: 100%;
+    margin-bottom: 10%;
 }
 
-.about-bubble img.bubble-img {
+/* .about-bubble img.bubble-img {
     display: block;
     width: 100%;
     height: auto;
-}
+} */
 
 .about-bubble-text {
     position: absolute;
@@ -289,8 +299,9 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000000;
-    overflow: hidden;
+    color: #ffffff;
+    
+    /* overflow: hidden; */
 }
 
 .about-bubble-text h2 {
@@ -306,11 +317,12 @@ header {
 }
 
 .characterpage {
-    background-image: url("ruin-bg(1).jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+     background-image: url(image/platform-bground.jpg);
+     background-repeat: no-repeat;
+     background-position: center top;
+    background-size: 100% 100%;
     padding-bottom: 500px;
+    height: 500px;
 }
 
 .characterpage h2 {
@@ -322,6 +334,68 @@ header {
     color: rgb(55, 38, 8);
     text-align: center;
     padding-top: 40px;
+}
+
+:root {
+   --pixel-size: 6;
+}
+
+
+.character-page {
+   
+    
+    position: relative;
+     
+}
+
+
+.Character {
+   
+    padding-top: 13%;
+    left: 24%;
+   width: calc(16px * var(--pixel-size));
+   height: calc(50px * var(--pixel-size));
+   overflow: hidden;
+   position:relative;
+   margin: 4em auto;
+   
+}
+
+
+
+.Character_spritesheet {
+   animation: moveSpritesheet 1s steps(4) infinite;
+   width: calc(128px * var(--pixel-size));
+   position: absolute;
+}
+
+.hide {
+    display: none;
+    position: relative;        
+  left: 12px;                
+  top: -60px;
+  white-space: nowrap;    
+  
+}
+
+.Character_spritesheet:hover + .hide {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.pixelart {
+   image-rendering: pixelated;
+}
+
+
+@keyframes moveSpritesheet {
+   from {
+      transform: translate3d(0px,0,0)
+   }
+   to {
+      transform: translate3d(-100%,0,0)
+   }
 }
 
 .gamefeat,
